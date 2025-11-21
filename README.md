@@ -8,12 +8,12 @@ This project investigates how to speed up Apriori-based association-rule mining 
 - **Local execution out of scope**: Reproducing the workflow locally would require replicating the Colab stack (CUDA/MKL versions, kagglehub paths, large-memory hardware). This was beyond the project’s scope, so no local instructions/support are provided.
 
 ### Repository Contents
-- `COS781_Group1_Ruan.ipynb` – primary experiment pipeline (data prep → sampling → QR/PCA → Apriori/DHP → metrics/visualizations).
+- `COS781_Group1.ipynb` – primary experiment pipeline (data prep → sampling → QR/PCA → Apriori/DHP → metrics/visualizations).
 - `generate_rule_quality_graph.py` – optional helper for plotting lift/confidence distributions.
 - Deliverable artifacts (`*.pdf`, `.tex`, etc.) – final report components and reflections.
 
 ### Running the Notebook (Colab Workflow)
-1. Upload/open `COS781_Group1_Ruan.ipynb` in Google Colab.
+1. Upload/open `COS781_Group1.ipynb` in Google Colab.
 2. Upload your `kaggle.json` via Colab’s file pane; the notebook copies it to `~/.kaggle/kaggle.json`.
 3. Run cells sequentially:
    - Download & merge Instacart CSVs using `kagglehub`.
@@ -39,3 +39,4 @@ This project investigates how to speed up Apriori-based association-rule mining 
 - Current benchmarks use the 20 000-order slice; scaling further awaits more generous hardware or cloud execution.
 - Local/CI automation, containerization, and GPU-specific tuning were intentionally excluded.
 - Future extensions could explore FP-Growth/Eclat baselines, GPU-based association mining, or automated hyperparameter sweeps once resource constraints are lifted.
+
